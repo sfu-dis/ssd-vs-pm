@@ -86,7 +86,7 @@ $./ycsb -benchmarkseconds 60 -p <spec> -tree pibench -wrapper $TREEWRAPPER -path
 ## Troubleshooting
 If you ever hit any issue that comes from Dash during compiling, use GCC instead of clang, and add '-march=native -mtune=native' to the compiler flags.
 
-### References:
+## References:
 [1] https://github.com/basicthinker/YCSB-C<br/>
 [2] https://github.com/jeffreyorihuela/b-tree-on-disk<br/>
 [3] https://github.com/dongx-psu/hashtable<br/>
