@@ -1,5 +1,14 @@
 # Benchmarking Optane SSD vs Optane DCPMM
 
+Here hosts resources for comparing SSD and PM indexes, including a benchmark driver dapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
+
+[1] https://github.com/basicthinker/YCSB-C<br/>
+[2] https://github.com/jeffreyorihuela/b-tree-on-disk<br/>
+[3] https://github.com/dongx-psu/hashtable<br/>
+[4] https://github.com/sfu-dis/fptree<br/>
+[5] https://github.com/sfu-dis/bztree<br/>
+[6] https://github.com/baotonglu/dash
+
 ## Required Flags
 ```
   -path <pathname>: Path to the containing folder of btree or hashtable, or to the pool file of PM-based indexes.
@@ -85,11 +94,3 @@ $./ycsb -benchmarkseconds 60 -p <spec> -tree pibench -wrapper $TREEWRAPPER -path
 
 ## Troubleshooting
 If you ever hit any issue that comes from Dash during compiling, use GCC instead of clang, and add '-march=native -mtune=native' to the compiler flags.
-
-## References:
-[1] https://github.com/basicthinker/YCSB-C<br/>
-[2] https://github.com/jeffreyorihuela/b-tree-on-disk<br/>
-[3] https://github.com/dongx-psu/hashtable<br/>
-[4] https://github.com/sfu-dis/fptree<br/>
-[5] https://github.com/sfu-dis/bztree<br/>
-[6] https://github.com/baotonglu/dash
