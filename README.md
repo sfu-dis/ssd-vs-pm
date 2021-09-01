@@ -1,4 +1,4 @@
-# README
+# Optane SSD vs DCPMM Benchmark
 
 ## Required Flags
 ```
