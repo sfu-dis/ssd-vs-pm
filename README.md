@@ -1,4 +1,4 @@
-# Optane SSD vs DCPMM Benchmark
+# Benchmarking Optane SSD vs Optane DCPMM
 
 ## Required Flags
 ```
