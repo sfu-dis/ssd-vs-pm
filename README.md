@@ -1,6 +1,6 @@
 # Benchmarking Optane SSD vs Optane DCPMM
 
-Here hosts resources for comparing SSD and PM indexes, including a benchmark driver dapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
+Here hosts resources for comparing SSD and PM indexes, including a benchmark driver adapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
 
 [1] https://github.com/basicthinker/YCSB-C<br/>
 [2] https://github.com/jeffreyorihuela/b-tree-on-disk<br/>
