@@ -1,6 +1,6 @@
 # Benchmarking Optane SSD vs Optane DCPMM
 
-Here hosts resources used in our recent CIDR 2022 paper below for comparing SSD and PM indexes, including a benchmark driver adapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
+Here hosts resources used in our recent CIDR 2022 [paper](http://www.sfu.ca/~kha85/modern-storage-index.pdf) below for comparing SSD and PM indexes, including a benchmark driver adapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
 
 ```
 SSDs Striking Back: The Storage Jungle and Its Implications to Persistent Indexes.
