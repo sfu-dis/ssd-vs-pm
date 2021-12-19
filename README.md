@@ -3,7 +3,7 @@
 Here hosts resources used in our recent CIDR 2022 [paper](http://www.sfu.ca/~kha85/modern-storage-index.pdf) below for comparing SSD and PM indexes, including a benchmark driver adapted from [1], a B-tree implementation based on [2], an on-disk hash table [3], FPTree [4], BzTree [5] and Dash [6].
 
 ```
-SSDs Striking Back: The Storage Jungle and Its Implications to Persistent Indexes.
+SSDs Striking Back: The Storage Jungle and Its Implications on Persistent Indexes.
 Kaisong Huang, Darien Imai, Tianzheng Wang and Dong Xie.
 12th Annual Conference on Innovative Data Systems Research (CIDR ’22). January 9-12, 2022, Chaminade, USA.
 ```
