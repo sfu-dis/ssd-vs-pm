@@ -81,11 +81,11 @@ $./ycsb -benchmarkseconds 60 -p <spec> -tree bztree -path $POOLFILE -threads $TH
 ### Run Dash tests
 Load the tree.
 ```
-$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -poolsize $POOL_SIZE_IN_BYTES -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -load true 
+$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -poolsize $POOL_SIZE_IN_BYTES -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -load true
 ```
 Run benchmarks.
 ```
-$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -run true 
+$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -run true
 ```
 ### Run tests with PiBench Wrapper<br/>
 Our benchmark tool is compatible with PiBench wrappers.<br/>
@@ -99,4 +99,5 @@ $./ycsb -benchmarkseconds 60 -p <spec> -tree pibench -wrapper $TREEWRAPPER -path
 ```
 
 ## Troubleshooting
-If you ever hit any issue that comes from Dash during compiling, use GCC instead of clang, and add '-march=native -mtune=native' to the compiler flags.
+1. If you ever hit any issue that comes from Dash during compiling, use GCC instead of clang, and add '-march=native -mtune=native' to the compiler flags.
+2. If you see similar errors like this one: `No rule to make target '/usr/lib/x86_64-linux-gnu/libpmemobj.so', needed by 'Ycsb/ycsb'`, please go to `Bztree/CMakeLists.txt` and change line 19 and line 69 to your own PMDK lib path.

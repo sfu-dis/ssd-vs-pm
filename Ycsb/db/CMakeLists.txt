@@ -28,10 +28,11 @@ FetchContent_Populate(epoch_reclaimer)
 FetchContent_Declare(
     dash
     GIT_REPOSITORY git@github.com:baotonglu/dash.git
+    GIT_TAG b15eb2a0036479b78d26cf13d5bf1ccb77ca5f91
 )
 FetchContent_Populate(dash)
 
-target_include_directories(db_dash 
+target_include_directories(db_dash
     PRIVATE ${epoch_reclaimer_SOURCE_DIR}
     PRIVATE ${dash_SOURCE_DIR}/src
 )

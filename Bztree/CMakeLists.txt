@@ -15,6 +15,7 @@ option(BUILD_TESTS "Build test cases using gflags, glog and gtest" OFF)
 ##################### PMwCAS #########################
 set(DESC_CAP "16" CACHE STRING "Descriptor capacity")
 add_definitions(-DDESC_CAP=${DESC_CAP})
+# NOTE, change to your own PMDK lib path accordingly.
 add_definitions(-DPMDK_LIB_PATH=/usr/lib/x86_64-linux-gnu)
 # FetchContent_Declare(PMWCAS
 #   GIT_REPOSITORY https://github.com/sfu-dis/pmwcas.git
@@ -64,6 +65,7 @@ target_include_directories(bztree PRIVATE include)
 
 # add_dependencies(bztree pmwcas)
 
+# NOTE, change to your own PMDK lib path accordingly.
 set(PMDK_LIB_PATH "/usr/lib/x86_64-linux-gnu" CACHE STRING "PMDK lib install path")
 add_library(pmemobj SHARED IMPORTED)
 set_property(TARGET pmemobj PROPERTY IMPORTED_LOCATION ${PMDK_LIB_PATH}/libpmemobj.so)
