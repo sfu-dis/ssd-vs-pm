@@ -77,7 +77,7 @@ ClientStats DelegateClient(int thread_id, ycsbc::Client *client, ycsbc::DB *db,
     --start_barrier;
     while (start_barrier);
     if(latency_sample <= 0.0)
-      while (!shutdown.load(std::memory_order_relaxed)) 
+      while (!shutdown.load(std::memory_order_relaxed))
         stats.oks += client->DoTransaction();
     else
       while (!shutdown.load(std::memory_order_relaxed)) {
@@ -292,7 +292,7 @@ int main(const int argc, const char *argv[]) {
          << " s, qps: " << sum / use_time << " ops/sec" << endl;
     cout << "*********************************" << endl;
   }
-  
+
   if (run && ramp) {
     workers.clear();
     auto ramp_sec = stoull(props[ycsbc::CoreWorkload::RAMP_UP_PROPERTY]);
@@ -300,7 +300,7 @@ int main(const int argc, const char *argv[]) {
     shutdown_barrier = num_threads;
     start_barrier = num_threads;
     std::vector<ycsbc::Client *> clients;
-    
+
     for (int i = 0; i < num_threads; ++i) {
       ycsbc::Client *client = new ycsbc::Client(*connections[i], ramp_workloads[i]);
       clients.push_back(client);
@@ -330,7 +330,7 @@ int main(const int argc, const char *argv[]) {
 
       slept++;
     };
-    
+
     printf("=== ramp-up ===\n");
     printf("Seconds,Operations\n");
     while (start_barrier);
@@ -423,7 +423,7 @@ int main(const int argc, const char *argv[]) {
     }
 
     cout << "********** run result **********" << endl;
-    cout << "operations: " << total_ops << ", duration: " << duration 
+    cout << "operations: " << total_ops << ", duration: " << duration
          << " s,  qps: " << total_ops / duration << " ops/s" << endl;
 
     if(latency_sample != 0){
@@ -445,7 +445,8 @@ int main(const int argc, const char *argv[]) {
                 << std::endl;
     }
   }
-  if (props.GetProperty("tree") != "pibench" && props.GetProperty("tree") != "dash") {
+  if (props.GetProperty("tree") != "pibench" && props.GetProperty("tree") != "dash" &&
+      props.GetProperty("tree") != "bztree") {
     for (auto &db: connections) {
       delete db;
     }
@@ -459,7 +460,7 @@ string ParseCommandLine(int argc, const char *argv[],
   int argindex = 1;
   string filename;
   while (argindex < argc && StrStartWith(argv[argindex], "-")) {
-    if (strcmp(argv[argindex], "-ramp_up") == 0) { 
+    if (strcmp(argv[argindex], "-ramp_up") == 0) {
       argindex++;
       if (argindex >= argc) {
         UsageMessage(argv[0]);
