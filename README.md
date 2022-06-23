@@ -78,15 +78,13 @@ Run benchmarks.
 ```
 $./ycsb -benchmarkseconds 60 -p <spec> -tree bztree -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -run true
 ```
+
 ### Run Dash tests
-Load the tree.
+Load and run in one command.
 ```
-$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -poolsize $POOL_SIZE_IN_BYTES -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -load true
+$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -poolsize $POOL_SIZE_IN_BYTES -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -load true -run true
 ```
-Run benchmarks.
-```
-$./ycsb -benchmarkseconds 60 -p <spec> -tree dash -path $POOLFILE -threads $THREADS -starting_cpu $STARTING_CPU -stride 2 -epoch 1024 -run true
-```
+
 ### Run tests with PiBench Wrapper<br/>
 Our benchmark tool is compatible with PiBench wrappers.<br/>
 Load the tree.
